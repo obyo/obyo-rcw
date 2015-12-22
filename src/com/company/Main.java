@@ -2,7 +2,7 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-        Recipe recipe = Util.loadRecipeFromFile("");
+        Recipe recipe = Util.loadRecipeFromFile("/Users/obatay/rcw/obyo-rcw/src/com/company/omuraisu.json");
         if (recipe == null) {
             System.out.println("レシピが取得出来ませんでした");
             return;
