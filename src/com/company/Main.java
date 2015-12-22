@@ -2,7 +2,12 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-        showRecipeTitle("オムライス");
+        Recipe recipe = Util.loadRecipeFromFile("");
+        if (recipe == null) {
+            System.out.println("レシピが取得出来ませんでした");
+            return;
+        }
+        showRecipeTitle(recipe.getTitle());
     }
 
     /**
@@ -17,4 +22,5 @@ public class Main {
         }
         System.out.println(title);
     }
+
 }
